@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body background="C:\Users\lione\Downloads\background 3.jpg">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="Game.html">FeedBack</a>
+  </nav>
+  <div class="container">
+    <h1>Check if u know me</h1>
+  </div>
+  <body>
+  <div class="game-container">
+    <h1>🎯 Fun Time</h1>
+    <p>I'm thinking of a number between <strong>1 and 10</strong>.</p>
+    <input type="number" id="guessInput" min="1" max="10" />
+    <br>
+    <button onclick="checkGuess()">Submit</button>
+    <div class="result" id="resultText"></div>
+  </div>
+
+  <script>
+    const secretNumber = 10;
+
+    function checkGuess() {
+      const guess = +document.getElementById('guessInput').value;
+      const resultText = document.getElementById('resultText');
+
+      if (guess === secretNumber) {
+        resultText.textContent = "🎉 Correct! You guessed the number!";
+        resultText.style.color = "green";
+      } else if (guess < 1 || guess > 10 || isNaN(guess)) {
+        resultText.textContent = "⚠️ Please enter a number between 1 and 10.";
+        resultText.style.color = "orange";
+      } else {
+        resultText.textContent = "❌ Nope! Try again.";
+        resultText.style.color = "red";
+      }
+    }
+  </script>
+  <div class="container">
+      <h2><span class="text">Send Us Your Comments</span></h2>
+    <form action="#" method="post">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="comments">Your Comments:</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
+
