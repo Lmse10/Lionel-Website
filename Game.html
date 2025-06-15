@@ -47,18 +47,20 @@
   </script>
   <div class="container">
       <h2><span class="text">Send Us Your Comments</span></h2>
-    <form action="#" method="post">
-        <label for="name">Your Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
+    <form action="https://formsubmit.co/lioneljasonds@gmail.com" method="POST">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Your Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
 
-        <label for="comments">Your Comments:</label><br>
-        <textarea id="comments" name="comments" rows="5" cols="30"></textarea><br><br>
+  <label for="comments">Your Comments:</label><br>
+  <textarea id="comments" name="comments" rows="5" cols="30" required></textarea><br><br>
 
-        <input type="submit" value="Submit">
-    </form>
+  <!-- Hidden input to prevent spam -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="submit" value="Submit">
+</form>
     </div>
 </body>
 </html>
