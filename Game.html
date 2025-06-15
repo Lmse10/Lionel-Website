@@ -47,7 +47,7 @@
   </script>
   <div class="container">
       <h2><span class="text">Send Us Your Comments</span></h2>
-    <form action="https://formsubmit.co/lioneljasonds@gmail.com" method="POST">
+    <form id="feedbackForm">
   <label for="name">Your Name:</label><br>
   <input type="text" id="name" name="name" required><br><br>
 
@@ -57,10 +57,13 @@
   <label for="comments">Your Comments:</label><br>
   <textarea id="comments" name="comments" rows="5" cols="30" required></textarea><br><br>
 
-  <!-- Hidden input to prevent spam -->
-  <input type="hidden" name="_captcha" value="false">
   <input type="submit" value="Submit">
 </form>
+
+<!-- Confirmation Message -->
+<p id="confirmationMessage" style="display:none; color: green; font-weight: bold; margin-top: 10px;">
+  ✅ Thank you for your feedback!
+</p>
     </div>
 </body>
 </html>
